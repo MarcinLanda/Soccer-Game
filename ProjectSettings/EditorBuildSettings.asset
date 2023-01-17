@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Map1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Levels/Starting Screen.unity
+    guid: 72564a1b2095db14aa6e36d0049d4ca2
+  - enabled: 1
+    path: Assets/Levels/Map 1.unity
+    guid: 6ed09a3cb4c261243b66f50f8bc553dd
+  - enabled: 1
+    path: Assets/Levels/Map 2.unity
+    guid: 1a502f5845c882240ac7286e01d83fc6
+  - enabled: 1
+    path: Assets/Levels/Map 3.unity
+    guid: 76959db8811270448868a2d453dafadb
+  - enabled: 1
+    path: Assets/Levels/Map 4.unity
+    guid: 7a342cccb922f7240bf4e6bf59f34364
+  - enabled: 1
+    path: Assets/Levels/Map 5.unity
+    guid: 6236ab6aa67bda54fa40a4cd2df40c92
+  - enabled: 1
+    path: Assets/Levels/Map 6.unity
+    guid: 55a6d963c6aff834f95bdc4a06561032
+  - enabled: 1
+    path: Assets/Levels/Ball.unity
+    guid: b6370faa762028d408ba61d6e62cff16
   m_configObjects: {}
