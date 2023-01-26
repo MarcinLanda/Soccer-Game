@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
-public class Trajectory : MonoBehaviour
-{
+//[RequireComponent(typeof(LineRenderer))]
+public class Trajectory : MonoBehaviour{
     public LineRenderer lr; //Launch Arrow
-    private void Awake()
-    {
+
+    private void Awake(){
         lr = GetComponent<LineRenderer>();
     }
 
-    public void RenderLine(Vector3 startPoint,Vector3 endPoint)
-    {
+    public void RenderLine(Vector3 startPoint,Vector3 endPoint){
         lr.positionCount = 2;
         Vector3[] points = new Vector3[2];
         points[0] = startPoint; 
@@ -20,8 +18,7 @@ public class Trajectory : MonoBehaviour
         lr.SetPositions(points);
     }
 
-    public void EndLine()
-    {
+    public void EndLine(){
         lr.positionCount = 0; //Deletes the line from the screen
     }
 }

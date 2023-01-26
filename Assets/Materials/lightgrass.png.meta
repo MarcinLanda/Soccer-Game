@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,8 +132,8 @@ TextureImporter:
       name: lightgrass_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 79
+        x: 0
+        y: 59
         width: 20
         height: 20
       alignment: 0
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13f48436bd74bb842bde9e86a1d3c651
-      internalID: -1124411978
+      spriteID: 7277fe2d66892e64eba13afe76ce1cd0
+      internalID: 2097013628
       vertices: []
       indices: 
       edges: []
@@ -153,49 +153,7 @@ TextureImporter:
       name: lightgrass_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 79
-        width: 30
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ece27cd96eb5584498ae6843fd680a9
-      internalID: 1229827327
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lightgrass_2
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 49
-        width: 30
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c093e4bff3ba6a42bd8370e5945db82
-      internalID: -411012336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lightgrass_3
-      rect:
-        serializedVersion: 2
-        x: 56
+        x: 30
         y: 59
         width: 30
         height: 20
@@ -206,18 +164,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daf55b0db46de5a42880eed85e4f453f
-      internalID: -273453219
+      spriteID: e303aa13b0e0ddc4ea78d0ed1864c341
+      internalID: 599227706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lightgrass_4
+      name: lightgrass_2
       rect:
         serializedVersion: 2
-        x: 6
-        y: 19
+        x: 0
+        y: 29
         width: 30
         height: 20
       alignment: 0
@@ -227,8 +185,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecbe230be2601b44a8a563156fb2c1d4
-      internalID: 994644668
+      spriteID: 2a37e17e57456e640951ea4dd8bd3c28
+      internalID: -35451398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightgrass_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 39
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f4abd1c9bcd3e4782e1825057f282e
+      internalID: -1302279757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lightgrass_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c9079ea24b46544943a5083b2a3eda
+      internalID: -2036240347
       vertices: []
       indices: 
       edges: []
@@ -237,10 +237,10 @@ TextureImporter:
       name: lightgrass_5
       rect:
         serializedVersion: 2
-        x: 46
-        y: 19
+        x: 40
+        y: 0
         width: 30
-        height: 30
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf6fa31ff29e22b4989007873e39d1e2
-      internalID: 1644950246
+      spriteID: 3a53ee641ea94a34299427ee367eb06a
+      internalID: -1140163793
       vertices: []
       indices: 
       edges: []
@@ -265,12 +265,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lightgrass_0: -1124411978
-      lightgrass_3: -273453219
-      lightgrass_4: 994644668
-      lightgrass_1: 1229827327
-      lightgrass_5: 1644950246
-      lightgrass_2: -411012336
+      lightgrass_0: 2097013628
+      lightgrass_3: -1302279757
+      lightgrass_4: -2036240347
+      lightgrass_1: 599227706
+      lightgrass_5: -1140163793
+      lightgrass_2: -35451398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

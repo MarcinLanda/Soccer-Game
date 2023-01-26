@@ -4,47 +4,37 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneSwitch : MonoBehaviour
-{
+public class SceneSwitch : MonoBehaviour{
     public int level;
     public int mode;
     public GameObject restart;
     public GameObject button;
+    public GameObject bubl;
 
-    void OnTriggerEnter2D()
-    {
-        if (mode == 1)
-        {
+    void OnTriggerEnter2D(){
+        if (mode == 1){
             SceneManager.LoadScene(level, LoadSceneMode.Single);
-        } else
-        {
+        } else {
             SceneManager.LoadScene(level, LoadSceneMode.Additive);
         }
     }
 
-    public void NewGameButton()
-    {
+    public void NewGameButton(){
         GameObject ball = GameObject.Find("Ball");
-        if (button.name == "Start")
-        {
-            if (mode == 1)
-            {
-                button.SetActive(false);
-                SceneManager.LoadScene(level, LoadSceneMode.Single);
-            }
-            else
-            {
+        if (mode == 1){
+            SceneManager.LoadScene(level, LoadSceneMode.Single);
+        } else {
+            if (button.name == "Start"){
                 button.SetActive(false);
                 restart.SetActive(true);
+                bubl.SetActive(true);
                 SceneManager.LoadScene(level, LoadSceneMode.Additive);
-                
+            } else if (button.name == "Retry"){
+                Rigidbody2D rb;
+                Destroy(ball);
+                SceneManager.LoadScene(level, LoadSceneMode.Additive);
+                button.SetActive(true);
             }
-        } else if (button.name == "Retry")
-        {
-            Rigidbody2D rb;
-            Destroy(ball);
-            SceneManager.LoadScene(level, LoadSceneMode.Additive);
-            button.SetActive(true);
         }
     }
 }

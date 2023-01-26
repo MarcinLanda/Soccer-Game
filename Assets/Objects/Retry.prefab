@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4633022425090350357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,8 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 7
   mode: 0
-  name: Button
   restart: {fileID: 0}
+  button: {fileID: 0}
+  bubl: {fileID: 0}
 --- !u!1 &4633022425957419301
 GameObject:
   m_ObjectHideFlags: 0

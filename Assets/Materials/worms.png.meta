@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 226c454b34e5e6b458dbd4098277990a
-      internalID: -1902847992
+      spriteID: 756cf000e7f769145bcef0a96e1cdda2
+      internalID: 1176940978
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf4a9f8a99569d478fe58f90b30057e
-      internalID: 1632336160
+      spriteID: 093129ef454385d47a9d82c59dae098c
+      internalID: 834765358
       vertices: []
       indices: 
       edges: []
@@ -185,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5406d937ebf944a49b7cf7c9d5dc797f
-      internalID: -625981345
+      spriteID: 8c07063c8cad7584391a5e534d8d8d80
+      internalID: -547725821
       vertices: []
       indices: 
       edges: []
@@ -202,9 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      worms_0: -1902847992
-      worms_1: 1632336160
-      worms_2: -625981345
+      worms_0: 1176940978
+      worms_1: 834765358
+      worms_2: -547725821
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

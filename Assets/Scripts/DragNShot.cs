@@ -5,47 +5,47 @@ using UnityEngine;
 public class DragNShot : MonoBehaviour
 {
     public float power = 10f; //power of launch
-    public Rigidbody2D rb; 
+
+    public GameObject ball;
+    public GameObject paused;
 
     public Vector2 minPower; //Set the minimum launch power
     public Vector2 maxPower; //Set the maximum launch power
 
-    Trajectory trajectory;
-    Camera cam;
-    Vector2 force;
-    Vector2 ballPos;
-    Vector2 startPoint;
-    Vector2 cp;
+    public Trajectory trajectory;
 
-    private void Start()
-    {
-        cam = Camera.main;
-        trajectory = GetComponent<Trajectory>();
-    }
+    public Camera cam;
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-        }
+    private Vector2 force;
+    private Vector2 ballPos;
+    private Vector2 startPoint;
+    private Vector2 cp;
 
-        if (rb.velocity.x == 0 && rb.velocity.y == 0)
-        {
-            ballPos = GameObject.Find("Ball").transform.position;
-            if (Input.GetMouseButton(0))
-            {
-                Vector2 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-                cp = ballPos + startPoint - currentPoint;
-                Vector2 cpp = new Vector2(Mathf.Clamp(cp.x, ballPos.x - maxPower.x, ballPos.x + maxPower.x), Mathf.Clamp(cp.y, ballPos.y - maxPower.y, ballPos.y + maxPower.y));
-                trajectory.RenderLine(ballPos, cpp);
+    private void Update(){
+        if (!paused.activeSelf || paused == null){
+            if (Input.GetMouseButtonDown(0)){
+                startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                force = new Vector2(Mathf.Clamp((cp.x - ballPos.x), minPower.x, maxPower.x), Mathf.Clamp((cp.y - ballPos.y), minPower.y, maxPower.y));
-                rb.AddForce(force * power, ForceMode2D.Impulse);
-                trajectory.EndLine(); //Deletes the line from the screen
+            if (ball.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude == 0){
+                ballPos = ball.transform.position;
+
+                if (Input.GetMouseButton(0)){
+                    Vector2 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+                    cp = ballPos + startPoint - currentPoint;
+                    Vector2 cpp = new Vector2(Mathf.Clamp(cp.x, ballPos.x - maxPower.x, ballPos.x + maxPower.x), Mathf.Clamp(cp.y, ballPos.y - maxPower.y, ballPos.y + maxPower.y));
+                    if (trajectory != null){
+                        trajectory.RenderLine(ballPos, cpp);
+                    }
+                }
+
+                if (Input.GetMouseButtonUp(0)){
+                    force = new Vector2(Mathf.Clamp((cp.x - ballPos.x), minPower.x, maxPower.x), Mathf.Clamp((cp.y - ballPos.y), minPower.y, maxPower.y));
+                    ball.gameObject.GetComponent<Rigidbody2D>().AddForce(force * power, ForceMode2D.Impulse);
+                    if (trajectory != null){
+                        trajectory.EndLine(); //Deletes the line from the screen
+                    }
+                }
             }
         }
     } 

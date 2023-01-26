@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b478db2487edb404bb503ce4ef8da832
+guid: 0e5dbee49753e694dac3cccfc8d47f91
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,12 +47,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -143,24 +143,46 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa2a0026a9e53de4591bb68792b40abd
-      internalID: -254167079
+      spriteID: f310ce4fad077044a9ab646650010141
+      internalID: 538539142
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: 36, y: -30}
+      - {x: 46, y: -30}
+      - {x: 46, y: 10}
+      - {x: 36, y: 10}
+      - {x: 36, y: 20}
+      - {x: 26, y: 20}
+      - {x: 26, y: 30}
+      - {x: -14, y: 30}
+      - {x: -14, y: 20}
+      - {x: -14, y: 20}
+      - {x: -24, y: 20}
+      - {x: -24, y: 20}
+      - {x: -24, y: 10}
+      - {x: -34, y: 10}
+      - {x: -34, y: -30}
+      - {x: -24, y: -30}
+      - {x: -24, y: -40}
+      - {x: -14, y: -40}
+      - {x: -14, y: -50}
+      - {x: 26, y: -50}
+      - {x: 26, y: -40}
+      - {x: 36, y: -40}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ball_0: -254167079
+      ball_0: 538539142
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
