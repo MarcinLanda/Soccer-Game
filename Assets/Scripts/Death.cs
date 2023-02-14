@@ -7,10 +7,24 @@ public class Death : MonoBehaviour{
     public GameObject ball;
     public GameObject removeButtons;
 
-    void OnTriggerEnter2D(){
-        popup.SetActive(true);
-        ball.SetActive(false);
-        removeButtons.SetActive(false);
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.tag == "Player")
+        {
+            popup.SetActive(true);
+            ball.SetActive(false);
+            removeButtons.SetActive(false);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Rigidbody2D rigidbody = collision.collider.GetComponent<Rigidbody2D>();
+        if (rigidbody != null)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                removeButtons.SetActive(false);
+            }
+        }
     }
 
     public void Pause(){

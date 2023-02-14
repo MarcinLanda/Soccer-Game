@@ -30,7 +30,6 @@ public class SceneSwitch : MonoBehaviour{
                 bubl.SetActive(true);
                 SceneManager.LoadScene(level, LoadSceneMode.Additive);
             } else if (button.name == "Retry"){
-                Rigidbody2D rb;
                 Destroy(ball);
                 SceneManager.LoadScene(level, LoadSceneMode.Additive);
                 button.SetActive(true);
