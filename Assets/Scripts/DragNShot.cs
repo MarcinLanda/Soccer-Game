@@ -12,7 +12,7 @@ public class DragNShot : MonoBehaviour
     public float xPow = .05f;
 
     public GameObject ball;
-    public GameObject paused;
+    public bool paused = false;
 
     public Vector2 minPower; //Set the minimum launch power
     public Vector2 maxPower; //Set the maximum launch power
@@ -27,8 +27,12 @@ public class DragNShot : MonoBehaviour
     private Vector2 cp;
     private Vector2 cpp;
 
+    private void Start() {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
+
     private void Update() {
-        if (!paused.activeSelf || paused == null) {
+        if (!paused) {
             if (Input.GetMouseButtonDown(0)) {
                 startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             }

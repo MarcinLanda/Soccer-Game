@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2481002236274687359}
   - component: {fileID: 2481002236274687358}
-  - component: {fileID: 6596866159205507695}
   - component: {fileID: 2481002236274687357}
   - component: {fileID: 2481002236274687356}
   - component: {fileID: 2481002236274687352}
@@ -30,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2481002236274687329}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: -0.1075, z: 0}
   m_LocalScale: {x: 0.9, y: 0.89378995, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2481002236274687358
 SpriteRenderer:
@@ -90,22 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6596866159205507695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2481002236274687329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0963ea2767db1c741af3342aea4fe73e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterLevel: 100
-  floatHeight: 100
-  bounceDamp: 1
-  gravity: 100
 --- !u!58 &2481002236274687357
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,6 +99,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -139,6 +141,12 @@ Rigidbody2D:
   m_AngularDrag: 1
   m_GravityScale: 1.5
   m_Material: {fileID: 6200000, guid: 4ccbfcec59c93ae438200ba7209897fd, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -156,11 +164,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 7
-  ball: {fileID: 0}
-  paused: {fileID: 0}
+  yPow: 1
+  xPow: 0.05
+  ball: {fileID: 2481002236274687329}
+  paused: 0
   minPower: {x: -3.5, y: -3.1}
   maxPower: {x: 3.5, y: 3.1}
-  trajectory: {fileID: 0}
+  trajectory: {fileID: 2481002236274687353}
   cam: {fileID: 0}
 --- !u!114 &2481002236274687353
 MonoBehaviour:
@@ -174,9 +184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d78b1ddb7aed01449ff8daab8d429a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lr: {fileID: 0}
+  lr: {fileID: 2481002236274687355}
 --- !u!120 &2481002236274687355
 LineRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -271,13 +282,17 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 1
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 1
     alignment: 1
     textureMode: 0
+    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
+  m_MaskInteraction: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+  m_ApplyActiveColorSpace: 0
